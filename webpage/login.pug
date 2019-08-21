@@ -1,0 +1,42 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Đăng nhập
+            .row.justify-content-between
+                div
+                    h3.blog__title Đăng nhập
+                    img(src="images/pattern/heading-pattern-1.png", alt="")
+                button.btn__form ĐĂNG KÝ
+            .login
+                form.login__form(action="")
+                    .form-group.row
+                        .col-md-12
+                            label.col-form-label.address-form__heading.mb-0 KHÁCH HÀNG ĐĂNG NHẬP
+                    .form-group.row
+                        .col-md-12
+                            label.col-form-label.address-form__label Nếu bạn có một tài khoản, xin vui lòng đăng nhập.
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Email *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Password *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row.d-flex.justify-content-end
+                        .col-md-10
+                            .form-check
+                                input.btn-checkbox(type="checkbox", name="")
+                                label.form-check-label(for="") Đặt làm địa chỉ mặc định ?
+                    .form-group.row.d-flex.justify-content-end
+                        .col-md-10
+                            button.btn__form(type="submit") ĐĂNG NHẬP
+        include includes/_footer.pug
+        
+                        

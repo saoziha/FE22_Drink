@@ -1,0 +1,85 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Địa chỉ
+            h3.blog__title ĐỊA CHỈ
+            img(src="images/pattern/heading-pattern-1.png", alt="")
+            .address-form
+                .row
+                    .col-md-6.col-lg-6
+                        h3.address-form__heading ĐỊA CHỈ CỦA BẠN
+                        form.form-main(action="")
+                            -var list = ['Tên','Họ & tên đệm','Công ty','Địa chỉ','Thành phố','Quốc tịch','Postal/Zip code','Phone']
+                                each label in list
+                                    .form-group.row
+                                        label.col-md-2.col-form-label.address-form__label= label
+                                        .col-md-10
+                                            input.form-control(type="text")
+                            .form-group.row.d-flex.justify-content-end
+                                .col-md-10
+                                    .form-check
+                                        input.btn-checkbox(type="checkbox", name="")
+                                        label.form-check-label(for="") Đặt làm địa chỉ mặc định ?
+                            .form-group.row.d-flex.justify-content-end
+                                .col-md-10
+                                    button.btn__form(type="submit") Chỉnh sửa địa chỉ
+                                    button.btn__form.btn__del Xóa
+                        hr
+                    .col-md-6.col-lg-6
+                        a.address-form__link(href="") Thêm địa chỉ
+                        form.form-main(action="")
+                            -var list = ['Tên','Họ & tên đệm','Công ty','Địa chỉ']
+                                each label in list
+                                    .form-group.row
+                                        label.col-md-2.col-form-label.address-form__label= label
+                                        .col-md-10
+                                            input.form-control(type="text")
+                            .form-group.row
+                                label.col-md-2.col-form-label.address-form__label Thành phố
+                                .col-md-10
+                                    select.form-control(name="")
+                                        option(value="", selected) Hà Nội
+                                        option(value="") Đà Nẵng
+                            .form-group.row
+                                label.col-md-2.col-form-label.address-form__label Quốc tịch
+                                .col-md-10
+                                    select.form-control(name="")
+                                        option(value="", selected) Việt Nam
+                                        option(value="") Mỹ
+                            .form-group.row
+                                label.col-md-2.col-form-label.address-form__label Postal/Zip code
+                                .col-md-10
+                                    input.form-control(type="text")
+                            .form-group.row
+                                label.col-md-2.col-form-label.address-form__label Phone
+                                .col-md-10
+                                    input.form-control(type="text")
+                            .form-group.row.d-flex.justify-content-end
+                                .col-md-10
+                                    .form-check
+                                        input.btn-checkbox(type="checkbox", name="")
+                                        label.form-check-label(for="") Đặt làm địa chỉ mặc định ?
+                            .form-group.row.d-flex.justify-content-end
+                                .col-md-10
+                                    button.btn__form(type="submit") Cập nhật địa chỉ
+                                    button.btn__form.btn__del Thoát
+            .address-info
+                -for(x = 0 ; x < 2 ; x++)
+                    .row                  
+                        .col-md-6.col-lg-6
+                            -var list =[{label: 'Tên', result: 'Giang'},{label: 'Họ & tên đệm', result: 'Lê Anh'},{label: 'Công ty', result: 'Cổ phần công nghệ DKT'},{label: 'Địa chỉ', result: 'Tòa nhà Hà nội group,442 Đội Cấn, Hà Nội'},{label: 'Thành phố', result: 'Hà nội'},{label: 'Quốc tịch', result: 'Việt Nam'},{label: 'Postal/Zip code', result: '2300089'},{label: 'Phone', result: '0123456789'},]
+                                each val in list    
+                                    .form-group.row
+                                        label.col-md-2.col-form-label.address-form__label=val.label
+                                        .col-md-10
+                                            label.col-form-label.address-form__label=val.result
+                            .address-info__edit.d-flex.justify-content-end
+                                a.address-form__link(href="") Thêm địa chỉ
+                            hr
+        include includes/_footer.pug

@@ -1,0 +1,16 @@
+.menu
+    .container
+        .row
+            .col-md-8.col-lg-8
+                ul.menu__list
+                    -var list = ['Tài khoản của tôi','Trạng thái đơn hàng','Danh sách ưa thích','Giỏ hàng','Đăng nhập']
+                        each link in list
+                            li.menu__item
+                                a(href="#").menu__link=link
+                                |-
+                    li.menu__item
+                        a(href="#").menu__link Đăng ký
+            .col-md-4.col-lg-4
+                .search-box
+                    input(type="text" placeholder="Tìm kiếm ở đây ...").search-box__button
+                    i.search-box__icon.fas.fa-search

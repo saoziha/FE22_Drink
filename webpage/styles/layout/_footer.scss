@@ -1,0 +1,89 @@
+.footer {
+    margin-top: 4rem;
+    text-align: center;
+
+    &__brand {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: solid 1px $color-light-gray;
+
+        &--item {
+            width: 100%;
+        }
+
+        li:nth-child(2) {
+            border-left: solid 1px $color-light-gray;
+            border-right: solid 1px $color-light-gray;
+        }
+
+    }
+
+    &__nav {
+        margin-top: 4em;
+
+    }
+
+    &__item {
+        text-align: left;
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    &__heading {
+        font-size: 1.5em;
+    }
+
+    &__link {
+        display: block;
+        color: $color-gray;
+
+        &:hover {
+            color: $color-gray;
+        }
+    }
+
+    &__email {
+        border: solid 1px gray;
+        height: 2em;
+        width: 60%;
+        padding: 0.5em 0.7em;
+    }
+
+    &__icon {
+        margin-top: 1rem;
+
+
+        &--item {
+            font-size: 1.2em;
+            margin-right: 1em;
+            color: $color-gray;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__contact {
+        p {
+            margin: 0;
+        }
+
+        span {
+            margin: 0 0.3em;
+        }
+    }
+
+}
+
+.copyright {
+    margin-top: 1rem;
+    padding-top: 1em;
+
+    &__text {
+        color: $color-gray;
+        text-align: left;
+    }
+}

@@ -1,0 +1,49 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Danh sách đơn hàng
+            h3.blog__title ĐƠN HÀNG
+            img(src="images/pattern/heading-pattern-1.png", alt="")
+            .order
+                .row
+                    .col-md-9
+                        .order__status.bg-light.p-3
+                            .address-form__heading DANH SÁCH ĐƠN HÀNG
+                            p Trạng thái tất cả (16) | Đã hủy (10) | Chưa duyệt (0) | Đã duyệt (0) | Đã thanh toán-chờ mua hàng (0) | Đã mua hàng (0) | Hàng đã về-chờ giao hàng (0) | Đã kết thúc (6)
+                        table.cart__table.table.table-bordered
+                            thead
+                                tr
+                                    -var list = ['STT','MÃ HÓA ĐƠN/NGÀY MUA HÀNG','KHO NHẬN HÀNG','SỐ SP','TỔNG TIỀN','TÌNH TRẠNG','THAO TÁC']
+                                        each heading in list
+                                            th(scope='col')=heading
+                            tbody
+                                -for(x = 1; x <= 6; x++)
+                                    tr
+                                        td=x
+                                        td.order__name
+                                            p.mb-0 LEANHGIANG89 - 17/06/2015
+                                            span.text-muted 01:36 14/03/2015
+                                        -var list=['Hà Đông','7','350.00đ','Đã thanh toán','Chi tiết']
+                                            each val in list
+                                                td=val
+                    .col-md-3
+                        .order__status.bg-light.p-3
+                            .address-form__heading THÔNG TIN KHÁCH HÀNG
+                            .order__status--item
+                                i.fas.fa-user
+                                span GiangLe giangle@gmail.com
+                            .order__status--item
+                                i.fas.fa-map-marker-alt 
+                                span Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+                            .order__status--item
+                                i.fas.fa-phone-volume 
+                                span (08) 6608 9686
+                            a.read-more(href="#") Chi tiết địa chỉ
+        include includes/_footer.pug
+        

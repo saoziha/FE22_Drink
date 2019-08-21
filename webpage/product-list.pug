@@ -1,0 +1,64 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .product-list
+            .container
+                .product-detail__tag
+                    a(href="").product-detail__tag--item Trang chủ
+                    span /
+                    a(href="").product-detail__tag--item Sản phẩm
+                    span /
+                    a(href="").product-detail__tag--item Rượu vang đỏ
+                .container-fluid.px-0
+                    img(class="product-list__banner", src="images/product-list-page/banner.jpg", alt="")
+            .container
+                .row
+                    .col-md-3.col-lg-3
+                        include includes/_side-menu.pug
+                    .col-md-9.col-lg-9
+                        .product-list__show
+                            .product-list__display
+                                .product-list__view
+                                    a(href="#")
+                                        span
+                                            i.fas.fa-th
+                                    a(href="#")
+                                        span
+                                            i.fas.fa-list
+                                .product-list__view
+                                    span
+                                        i.fas.fa-caret-left
+                                    -var list = ["1", "2", "3", "4", "5"]
+                                        each page in list
+                                            a(href="")
+                                                span=page
+                                    span
+                                        i.fas.fa-caret-right
+                            .new-product__list
+                                #product-list.row
+                                    //- -for(x = 0; x < 3; x++)
+                                    //-     -var list = ["images/products/hotproduct_1.png", "images/products/hotproduct_2.png", "images/products/hotproduct_3.png"]
+                                    //-         each val in list 
+                                    //-             .col-md-4.col-lg-4
+                                    //-                 .new-product__item
+                                    //-                     img(class="new-product__img", src=val, alt="")
+                                    //-                     h3.new-product__name RƯỢU VANG ĐÀ LẠT
+                                    //-                     .new-product__price
+                                    //-                         h4.new-product__price--main 370.000
+                                    //-                             sup đ 
+                                    //-                         span.text-muted -
+                                    //-                         h4.new-product__price--sub.text-muted  450.000
+                                    //-                             sup đ
+                                    //-                     button.btn.btn--primary.btn__add ADD TO CART
+                                    //-                     .new-product__option.d-flex.justify-content-between
+                                    //-                         .new-product__option--item
+                                    //-                             i.fas.fa-heart
+                                    //-                             span Yêu thích
+                                    //-                         .new-product__option--item
+                                    //-                             i.far.fa-chart-bar
+                                    //-                             span So sánh
+        include includes/_footer.pug
+    include includes/_js.pug
+    

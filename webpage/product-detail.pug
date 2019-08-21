@@ -1,0 +1,138 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+
+    .wrap
+        .container
+            .product-detail
+                .product-detail__tag
+                    a(href="").product-detail__tag--item Trang chủ
+                    span /
+                    a(href="").product-detail__tag--item Sản phẩm
+                    span /
+                    a(href="").product-detail__tag--item Rượu vang đỏ
+            .row
+                .col-md-7.col-lg-7
+                    .product-detail__show
+                        .row
+                            .col-md-3.col-lg-3
+                                .product-detail__list
+                                    .product-detail__list--item
+                                        i.fas.fa-arrow-up
+                                    -var list = ["detailproduct_1.png","detailproduct_1.png","detailproduct_1.png","detailproduct_3.png","detailproduct_1.png"]
+                                        each img in list
+                                            .product-detail__list--item
+                                                img.product-detail__list--img(src="images/products/" + img, alt="")
+                                    .product-detail__list--item
+                                        i.fas.fa-arrow-down
+                            .col-md-9.col-lg-9
+                                .product-detail__img
+                                    img.product-detail__img--main(src="images/products/detailblog_box.png", alt="")
+                .col-md-5.col-lg-5
+                    .product__info
+                        h3.hot-product__brand RƯỢU NHO NĂM 1987
+                        img(src="images/pattern/heading-pattern-1.png", alt="")
+                        h4.hot-product__price 330.000
+                            sup đ
+                        .product-detail__rating
+                            span
+                                i.fas.fa-star                           
+                                i.fas.fa-star                           
+                                i.fas.fa-star
+                                i.fas.fa-star-half-alt
+                                i.far.fa-star
+                            span 1 Reviews(S)
+                            span |
+                            span Add Your Review
+                        .product-detail__color
+                            h4.product-detail__heading MÀU SẮC
+                            .product-detail__color--option
+                                .product-detail__color--orange
+                                .product-detail__color--black
+                                .product-detail__color--red
+                        h4.product-detail__heading KÍCH CỠ
+                            .form-group
+                                select.form-control.product-detail__size
+                                    option Loại to
+                                    option Loại vừa
+                                    option Loại nhỏ
+                        h4.product-detail__heading SỐ LƯỢNG
+                        .product-detail__amount
+                            .product-detail__amount--select
+                                button -
+                                span 3 
+                                button +
+                            button.btn.btn--primary.btn__add ADD TO CART
+                        .product-detail__interact
+                            .product-detail__interact--item
+                                i.fas.fa-heart
+                                span Yêu thích
+                            .product-detail__interact--item
+                                i.far.fa-chart-bar
+                                span So sánh
+                            .product-detail__interact--item
+                                i.fas.fa-envelope
+                                span Email
+                        .product-detail__descript
+                            h4.product-detail__heading MÔ TẢ
+                            p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                        img(src="images/share.png", alt="")
+        section.product-detail__describe
+            .container
+                .row
+                    .col-md-8.col-lg-8
+                        .product-detail__describe--tag
+                            .product-detail__tag--item
+                                a.product-detail__link(href="#") ĐẶC ĐIỂM NỔI BẬT
+                            .product-detail__tag--item
+                                a.product-detail__link(href="#") THÔNG TIN SẢN PHẨM
+                            .product-detail__tag--item
+                                a.product-detail__link(href="#") ĐÁNH GIÁ
+                        .product-detail__text 
+                            p.
+                                    Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                                Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ
+                                rượu nhẹ, bột ga đầy trắng mịn.
+                    .col-md-4.col-lg-4
+                        .product-detail__describe--sub
+                            img.product-detail__describe--img(src="images/sub-menu.png", alt="")
+                            h3.product-detail__describe--heading RƯỢU NHO
+        section.relate-product
+            .container
+                h3.home-page__label SẢN PHẨM MỚI
+                img(src="images/pattern/heading-pattern-2.png", alt="")
+                .new-product__list
+                    .row
+                        -var list = ["images/products/hotproduct_1.png", "images/products/hotproduct_2.png", "images/products/hotproduct_3.png", "images/products/hotproduct_4.png"]
+                                each val in list 
+                                    .col-md-3.col-lg-3
+                                        .new-product__item
+                                            img(class="new-product__img", src=val, alt="")
+                                            h3.new-product__name RƯỢU VANG ĐÀ LẠT
+                                            .new-product__price
+                                                h4.new-product__price--main 370.000
+                                                    sup đ 
+                                                span.text-muted -
+                                                h4.new-product__price--sub.text-muted  450.000
+                                                    sup đ
+                                            button.btn.btn--primary.btn__add ADD TO CART
+                                            .new-product__option.d-flex.justify-content-between
+                                                .new-product__option--item
+                                                    i.fas.fa-heart
+                                                    span Yêu thích
+                                                .new-product__option--item
+                                                    i.far.fa-chart-bar
+                                                    span So sánh
+        include includes/_footer.pug
+        
+                        

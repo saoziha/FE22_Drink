@@ -1,0 +1,110 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Blog
+            h3.blog__title BLOG
+            img(src="images/pattern/heading-pattern-1.png", alt="")
+            .blog-detail
+                .row
+                    .col-md-4.col-lg-4
+                        .blog-detail__side
+                            h3.side-menu__heading--main BÀI VIẾT MỚI NHÁT
+                            -for(x=0; x<3; x++)
+                                .blog-detail__side--item
+                                    .blog-detail__side--img
+                                        img(src="images/blog/detailblog.png", alt="")
+                                    .blog-detail__article
+                                        a(href="#") CÁCH SẮP XẾP NỘI THẤT TRONG NHÀ
+                                        span
+                                            i.far.fa-calendar-alt
+                                            |12/06/2015
+                            .blog-detail-tag
+                                h3.side-menu__heading--main BLOG TAGS
+                                .side-menu__tag
+                                    -var list = ["Đồng Hồ ","Túi","Trẻ em","Phụ kiện","Giày","Sandal","Áo sơ mi","Nước hoa", "Thời trang nữ"]
+                                        each item in list
+                                            .side-menu__tag--item
+                                                a.side-menu__link(href="#")=item
+                            .blog-detail__video
+                                h3.side-menu__heading--main LATEST VIDEO
+                                img(src="images/blog/video.png", alt="")
+                    .col-md-8.col-lg-8
+                        .blog-detail__main
+                            #blog
+                                //- .blog__img
+                                //-     img(class="blog__img--main" src="images/blog/blog_1.png", alt="")
+                                //- h4.blog__heading Vang Thăng Long Classic
+                                //- .blog__info
+                                //-     span.blog__author Đăng bởi Giangle
+                                //-     span |
+                                //-     span.blog__time 30/06/2015
+                                //-     span |
+                                //-     span.blog__comment 60 bình luận
+                                //- p.blog__content
+                                //-     | Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                                //-     | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                                //-     | Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, 
+                                //-     | sản phẩm được đóng chai dung tích 750ml...
+                                //-     | Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                                //-     | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                                //-     | Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, 
+                                //-     | sản phẩm được đóng chai dung tích 750ml...
+                            .blog-detail__contribute
+                                h3.side-menu__heading--main ĐÓNG GÓP Ý KIẾN
+                                form(action="")
+                                    .form-group.row
+                                        lable.col-md-2.col-form-label.blog-detail__contribute--name Tên
+                                            span *
+                                        .col-md-10
+                                            input(type="text").form-control
+                                    .form-group.row
+                                        lable.col-md-2.col-form-label.blog-detail__contribute--name Email
+                                            span *
+                                        .col-md-10
+                                            input(type="email").form-control
+                                    .form-group.row
+                                        lable.col-md-2.col-form-label.blog-detail__contribute--name Ý kiến
+                                            span *
+                                        .col-md-10
+                                            textarea(name="", cols="30", rows="5",type="text-area").form-control
+                                    .form-group.row.d-flex.justify-content-end
+                                        .col-md-10
+                                            button.btn.btn__send(type="submit") GỬI Ý KIẾN
+                            .comment
+                                h3.side-menu__heading--main BÌNH LUẬN 
+                                    span (3)
+                                -for(x = 0; x < 3; x++ )
+                                    .comment__item
+                                        .comment__info
+                                            .row.mx-0.justify-content-between
+                                                .col-md-3
+                                                    .comment__author
+                                                        p Bình luận bởi Giangle
+                                                .col-md-9
+                                                    .comment__time
+                                                        p Cách đây 4 giờ
+                                                        a(href="#") Trả lời
+                                        p.comment__text
+                                            |Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                                            | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                                            | Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, 
+                                            | sản phẩm được đóng chai dung tích 750ml...
+                            .switch-page
+                                .switch-page__button
+                                    i.fas.fa-arrow-left
+                                .switch-page__item
+                                    a.switch-page__link(href="#") 1
+                                .switch-page__item
+                                    a.switch-page__link(href="#") 2
+                                .switch-page__item
+                                    a.switch-page__link(href="#") 3
+                                .switch-page__button
+                                    i.fas.fa-arrow-right
+        include includes/_footer.pug
+    include includes/_js.pug                                     

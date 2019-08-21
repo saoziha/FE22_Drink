@@ -1,0 +1,22 @@
+.address-form {
+    margin-top: 1.5rem;
+
+    &__heading {
+        font-size: 1.5em;
+        margin-bottom: 1rem;
+    }
+
+    &__label {
+        font-size: 1.3em;
+    }
+
+    &__link {
+        font-size: 1.5em;
+        margin-bottom: 0.725rem;
+        display: block;
+    }
+
+    hr {
+        margin: 2.5rem 0;
+    }
+}

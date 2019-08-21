@@ -1,0 +1,57 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Địa chỉ
+            h3.blog__title LIÊN HỆ
+            img(src="images/pattern/heading-pattern-1.png", alt="")
+            .contact
+                .row
+                    .col-md-8
+                        iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.953775388207!2d105.82848121493267!3d21.034535485995235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba042fdd361%3A0x4144cd0d404e3663!2zxJDhu5lpIEPhuqVu!5e0!3m2!1svi!2s!4v1558327390735!5m2!1svi!2s", width="600", height="450", frameborder="0", style="border:0", allowfullscreen)
+                        form.contribute(action="")
+                            .form-group.row
+                                lable.col-md-2.col-form-label.blog-detail__contribute--name Your name
+                                .col-md-10
+                                    input(type="text").form-control
+                            .form-group.row
+                                lable.col-md-2.col-form-label.blog-detail__contribute--name Your email
+                                .col-md-10
+                                    input(type="email").form-control
+                            .form-group.row
+                                lable.col-md-2.col-form-label.blog-detail__contribute--name Subject
+                                .col-md-10
+                                    input(type="text").form-control
+                            .form-group.row
+                                lable.col-md-2.col-form-label.blog-detail__contribute--name 
+                                .col-md-10
+                                    textarea(name="", cols="30", rows="5",type="text-area").form-control
+                            .form-group.row.d-flex.justify-content-end
+                                .col-md-10
+                                    button.btn__form(type="submit") GỬI
+                    .col-md-4
+                        .contact__info
+                            img.contact__img.mb-2(src="images/logo-brand/logo.png", alt="")
+                            .order__status--item
+                                i.fas.fa-map-marker-alt 
+                                span Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+                            .order__status--item
+                                i.fas.fa-phone-volume 
+                                span (08) 6608 9686
+                            .order__status--item
+                                i.fas.fa-envelope
+                                span Support@bizweb.vn
+                            .order__status--item
+                                h3.address-form__heading FOLLOW US:
+                                i.fab.fa-facebook-f
+                                i.fab.fa-google-plus-g
+                                i.fab.fa-twitter
+                                i.fab.fa-youtube
+                                i.fab.fa-twitter
+                                i.fab.fa-google-plus-g
+        include includes/_footer.pug

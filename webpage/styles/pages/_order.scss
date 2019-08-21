@@ -1,0 +1,34 @@
+.order {
+    margin-top: 2rem;
+
+    &__status {
+        border: solid 1px $color-light-gray;
+        font-size: 1.3em;
+
+        &--item {
+            margin-bottom: 0.5rem;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__name {
+        text-align: left;
+    }
+
+    .cart__table {
+        font-size: 1.2em;
+
+        td {
+            vertical-align: middle;
+        }
+
+    }
+
+    .address-form__heading {
+        font-size: 13px;
+    }
+
+}

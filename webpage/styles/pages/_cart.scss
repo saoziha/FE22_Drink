@@ -1,0 +1,21 @@
+.cart {
+    margin-top: 2rem;
+
+    &__table {
+        text-align: center;
+        font-size: 1.5em;
+        background-color: #FAFAFA;
+    }
+
+    &__img {
+        max-width: 50px;
+    }
+
+    td {
+        vertical-align: middle;
+    }
+
+    .btn__form {
+        margin-left: 1rem;
+    }
+}

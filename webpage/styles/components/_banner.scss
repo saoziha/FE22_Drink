@@ -1,0 +1,38 @@
+.banner {
+    @include centerItemFlex;
+    color: $color-white;
+    margin-top: 2em;
+
+    &__title {
+        display: block;
+        position: relative;
+
+        &--main {
+            font-family: $banner-main-font;
+            font-size: 15rem;
+        }
+
+        &--sub {
+            position: absolute;
+            font-family: $banner-sub-font;
+            font-size: 4rem;
+            top: 23%;
+            right: 0;
+
+        }
+    }
+
+    &__time {
+        position: relative;
+        display: block;
+        width: 16%;
+
+        &--main {
+            position: absolute;
+            font-size: 2rem;
+            font-family: $banner-time-main;
+            top: 62%;
+        }
+    }
+
+}

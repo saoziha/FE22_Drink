@@ -1,0 +1,58 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Đăng ký
+            .row.justify-content-between.mx-0
+                div
+                    h3.blog__title ĐĂNG KÝ
+                    img(src="images/pattern/heading-pattern-1.png", alt="")
+                button.btn__form.mr-0 ĐĂNG NHẬP
+            .login
+                form.login__form(action="")
+                    .form-group.row
+                        .col-md-12
+                            label.col-form-label.address-form__heading.mb-0 THÔNG TIN CÁ NHÂN
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Tên trước *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Tên sau *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Email *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Password *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row.d-flex.justify-content-end
+                        .col-md-10
+                            .form-check
+                                input.btn-checkbox(type="checkbox", name="")
+                                label.form-check-label(for="") Đăng ký nhận bản tin
+                    .form-group.row
+                        .col-md-12
+                            label.col-form-label.address-form__heading.mb-0 THÔNG TIN ĐĂNG NHẬP
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Mật khẩu *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .form-group.row
+                        label.col-md-2.col-form-label.address-form__label Xác nhận mật khẩu *
+                        .col-md-10
+                            input.form-control(type="text")
+                    .row.justify-content-end.mx-0
+                        button.btn__form(type="submit") GỬI
+                        button.btn__form.mr-0 QUAY LẠI
+        include includes/_footer.pug
+        
+                        

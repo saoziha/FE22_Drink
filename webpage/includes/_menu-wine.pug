@@ -1,0 +1,36 @@
+nav.menu-wine
+    .container
+        .row
+            .col-md-3.col-lg-3.d-flex.justify-content-end
+                img.logo-brand(src="images/logo-brand/logo.png", alt="")
+            .col-md-9.col-lg-9
+                .menu-wine__list
+                    .menu-wine__item
+                        a.menu-wine__link(href="homepage.html") TRANG CHỦ
+                    .menu-wine__item--drop
+                        a.menu-wine__link(href="#") RƯỢU VANG ĐỎ
+                        span.icon-arrow
+                            i.fas.fa-caret-up
+                        .sub-menu
+                            .sub-menu__list
+                                h3.sub-menu__heading RƯỢU NGOẠI
+                                - var list=['Rượu Chivar','Hàng độc - rượu đọc đáo','Johnnie Walker','Rượu Whisky','Rượu Reni Martin','Rượu Glenmorangie']
+                                    each val in list
+                                        a.sub-menu__link(href="#")=val
+                            .sub-menu__list
+                                h3.sub-menu__heading RƯỢU VANG
+                                - var list=['Rượu Chivar','Hàng độc - rượu đọc đáo','Johnnie Walker','Rượu Whisky','Rượu Reni Martin','Rượu Glenmorangie']
+                                    each val in list
+                                        a.sub-menu__link(href="#")=val
+                            .sub-menu__list
+                                h3.sub-menu__heading RƯỢU NGOẠI
+                                - var list=['Rượu Chivar','Hàng độc - rượu đọc đáo','Johnnie Walker','Rượu Whisky','Rượu Reni Martin','Rượu Glenmorangie']
+                                    each val in list
+                                        a.sub-menu__link(href="#")=val
+                            .sub-menu__list
+                                img(src="../images/sub-menu.png", alt="alt")
+
+                    -var list =[{link: '#', text: 'RƯỢU TRẮNG '}, {link:'#', text: 'CHAMPAGNE'}, {link:'#', text:'THÔNG TIN'}, {link:'#', text:'BLOG'}, {link:'#', text:'LIÊN HỆ'}]
+                            each item in list
+                                .menu-wine__item
+                                    a.menu-wine__link(href=item.link)= item.text

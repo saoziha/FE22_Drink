@@ -1,0 +1,44 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .container
+            .product-detail__tag
+                a(href="").product-detail__tag--item Trang chủ
+                span /
+                a(href="").product-detail__tag--item Sản phẩm 
+                span /
+                a(href="").product-detail__tag--item Giỏ hàng
+            h3.blog__title GIỎ HÀNG
+            img(src="images/pattern/heading-pattern-1.png", alt="")
+            .cart
+                table.cart__table.table.table-bordered
+                    thead
+                        tr
+                        -var list = ['ẢNH','TÊN SẢN PHẨM','GIÁ','SỐ LƯỢNG','TỔNG SỐ','XÓA']
+                            each heading in list
+                                th(scope='col')=heading
+                    tbody
+                        -for(x = 0; x < 4; x++)
+                            tr
+                                td
+                                    img.cart__img(src="images/products/product-info-1.jpg")
+                                td
+                                    p.text-uppercase Rượu Vang đỏ 
+                                td 
+                                    p.cart__price 345.000
+                                        sup đ
+                                td
+                                    span 1
+                                td
+                                    p.cart__price 345.000
+                                        sup đ
+                                td  
+                                    i.fas.fa-trash.alt
+                .row.d-flex.justify-content-end.mx-0
+                    button.btn__form TIẾP TỤC MUA HÀNG
+                    button.btn__form XÓA
+                    button.btn__form.mr-0(type="submit") CẬP NHẬT
+        include includes/_footer.pug
+        

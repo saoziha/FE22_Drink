@@ -1,0 +1,217 @@
+.product-detail {
+    &__tag {
+        font-size: 1.2em;
+        margin: 2em 0 3em 0;
+
+        &--item {
+            margin: 0 0.5em;
+            color: $color-gray;
+
+            &:hover {
+                color: $color-primary;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__show {
+        border: solid 1px $color-light-gray;
+
+    }
+
+    &__list {
+        border-right: solid 1px $color-light-gray;
+        @include centerItemFlex;
+        flex-direction: column;
+
+        &--item {
+            padding: 0.7em 0;
+            border-bottom: solid 1px $color-light-gray;
+
+            &:nth-child(6) {
+                border: none;
+            }
+
+            &:first-child {
+                border: none;
+                font-size: 1.5em;
+            }
+
+            &:last-child {
+                border: none;
+                font-size: 1.5em;
+            }
+
+        }
+    }
+
+    &__img {
+        @include centerItemFlex;
+        height: 100%;
+        margin-left: -3em;
+
+        &--main {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__rating {
+        font-size: 1.2em;
+        padding: 0.9em 0;
+        border-top: solid 1px $color-light-gray;
+        border-bottom: solid 1px $color-light-gray;
+
+
+        span {
+            margin-right: 0.5em;
+        }
+    }
+
+    &__heading {
+        font-size: 1.6em;
+
+    }
+
+    &__color {
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        &--option {
+            display: flex;
+        }
+
+        &--orange {
+            width: $color-box-width;
+            height: $color-box-height;
+            background-color: orange;
+            margin-right: 1em;
+
+        }
+
+        &--black {
+            width: $color-box-width;
+            height: $color-box-height;
+            background-color: black;
+            margin-right: 1em;
+        }
+
+        &--red {
+            width: $color-box-width;
+            height: $color-box-height;
+            background-color: red;
+            margin-right: 1em;
+        }
+
+    }
+
+    &__size {
+        margin: 0.5em 0;
+        width: 40%;
+        border-radius: 0;
+    }
+
+    &__amount {
+        &--select {
+            display: inline-block;
+            width: 27%;
+            font-size: 1.5em;
+            background-color: $color-gray;
+            margin-top: -32px;
+
+            span {
+                display: inline-block;
+                background: $color-white;
+                padding: 0.1em 1.4em;
+            }
+
+            button {
+                padding: 0.2em 0.3em;
+                background-color: transparent;
+            }
+        }
+
+
+    }
+
+    &__interact {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+
+        &--item {
+            color: $color-gray;
+            font-size: 1.2em;
+            margin-right: 1em;
+
+            i {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    &__descript {
+        margin-top: 1em;
+    }
+
+    &__describe {
+        margin-top: 3rem;
+
+        &--sub {
+            position: relative;
+        }
+
+        &--img {
+            width: 100%;
+        }
+
+        &--heading {
+            position: absolute;
+            color: $color-white;
+            font-size: 2.3em;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        &--tag {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.7em;
+
+            &--item {
+
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+            }
+        }
+
+    }
+
+    &__text {
+        font-size: 1.3em;
+    }
+
+
+
+    &__link {
+        color: $color-gray;
+        font-size: 1.7em;
+        padding: 0.7em 1em;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}
+
+.relate-product {
+    margin: 3rem 0;
+    text-align: center;
+}

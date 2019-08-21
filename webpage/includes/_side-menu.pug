@@ -1,0 +1,28 @@
+.side-menu
+    .side-menu__item
+        h3.side-menu__heading--main DANH MỤC SẢN PHẨM
+        img.side-menu__pattern(src="images/pattern/heading-pattern-1.png", alt="")
+        .side-menu__list
+            h4.side-menu__heading--sub RƯỢU NGOẠI
+            -var list = ['Rượu Chivas (26)','Hàng độc-Rượu đọc đáo (36)','Johnnie Walker (46)','Rượu Whisky (24)','Rượu Reni Martin (16)','Rượu Glenmorangie (11)','Rượu Ballantine (7)','Rượu Cognac (11)','Rượu Vodka (93)','Rượu Macallan (11)','Rượu Brandy (62)','Rượu Hennessy (20)','Rượu Gin - Tequila - Liqueur - rượu mùi (36)', 'Rượu Champage (12)','Rượu Single malt Scotch whisky (47)', 'Rượu Spirit (11)']
+                each item in list
+                    a.side-menu__link(href="#")=item
+            h4.side-menu__heading--sub RƯỢU VANG
+            -var list = ['Rượu Vang Pháp (44)', 'Rượu Vang Úc (34)','Rượu Vang Mỹ (16)','Rượu Vang Chile (48)','Rượu Vang Philip (1)','Rượu Vang Nam Phi (20)','Rượu Vang Ý(2)']
+                each item in list
+                    a.side-menu__link(href="#")= item
+    .side-menu__item
+        h3.side-menu__heading--main SO SÁNH SẢN PHẨM
+        img.side-menu__pattern(src="images/pattern/heading-pattern-1.png", alt="")
+        .side-menu__compare
+            p bạn chưa có sản phẩm nào để so sánh
+    .side-menu__item
+        h3.side-menu__heading--main TAG SẢN PHẨM
+        img.side-menu__pattern(src="images/pattern/heading-pattern-1.png", alt="")
+        .side-menu__tag
+            -var list = ["Đồng Hồ ","Túi","Trẻ em","Phụ kiện","Giày","Sandal","Áo sơ mi","Nước hoa", "Thời trang nữ"]
+                each item in list
+                    .side-menu__tag--item
+                        a.side-menu__link(href="#")=item
+    .side-menu__item
+        img.side-menu__img(src="images/product-list-page/product_banner.jpg", alt="")

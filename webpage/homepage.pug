@@ -1,0 +1,190 @@
+include includes/_head.pug
+body
+    .homepage-header.container-fluid.px-0
+        include includes/_menu-homepage.pug
+        include includes/_banner.pug
+    include includes/_menu-wine.pug
+
+    .main-content.container-fluid.px-0
+        img(class="main-content__img--left", src="images/home-page/img-left.jpg", alt="")
+        img(class="main-content__img--right", src="images/home-page/img-right.png", alt="")
+        .home-page
+            h3.home-page__label GIỚI THIỆU
+            img(src="images/pattern/heading-pattern-2.png", alt="")
+            .home-page__intro
+                p Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam
+            button.btn.btn--primary XEM THÊM
+            section.hot-product
+                .container
+                    img(src="images/home-page/new-product-bg.jpg", alt="").hot-product__bg
+                    .hot-product__wrap
+                        .row
+                            .col-md-6.col-lg-6
+                                .hot-product__left
+                                    .hot-product__img
+                                        img(src="images/products/new-product.png", alt="")
+                                    .product-tag
+                                        span Sale
+                                        img(src="images/tag/sale.png", alt="")
+                            .col-md-6.col-lg-6
+                                .hot-product__right
+                                    h3.hot-product__brand RƯỢU NHO NĂM 1987
+                                    img(src="images/pattern/heading-pattern-1.png", alt="")
+                                    h4.hot-product__price 330.000
+                                        sup đ
+                                    button.btn.btn--primary.btn__add ADD TO CART
+                                    p.hot-product__describe Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                                    .hot-product__info
+                                        -var list= [{number: '334', time: 'NGÀY'}, {number: '26', time: 'GIỜ'}, {number: '60', time: 'PHÚT'}, {number: '15', time: 'GIÂY'} ]
+                                            each val in list
+                                                .hot-product__info--item
+                                                    h3=val.number
+                                                    h4=val.time
+            section.new-product
+                .container
+                    h3.home-page__label SẢN PHẨM MỚI
+                    img(src="images/pattern/heading-pattern-2.png", alt="")
+                    .new-product__list
+                        .product-single.row
+                            //- -var list = ["images/products/newproduct_1.png", "images/products/newproduct_2.png", "images/products/newproduct_3.png", "images/products/newproduct_4.png"]
+                            //-     each val in list 
+                            //-         .col-md-3.col-lg-3
+                            //-             .new-product__item
+                            //-                 img(class="new-product__img", src=val, alt="")
+                            //-                 h3.new-product__name RƯỢU VANG ĐÀ LẠT
+                            //-                 .new-product__price
+                            //-                     h4.new-product__price--main 370.000
+                            //-                         sup đ 
+                            //-                     span.text-muted -
+                            //-                     h4.new-product__price--sub.text-muted  450.000
+                            //-                         sup đ
+                            //-                 button.btn.btn--primary.btn__add ADD TO CART
+                            //-                 .new-product__option.d-flex.justify-content-between
+                            //-                     .new-product__option--item
+                            //-                         i.fas.fa-heart
+                            //-                         span Yêu thích
+                            //-                     .new-product__option--item
+                            //-                         i.far.fa-chart-bar
+                            //-                         span So sánh
+        section.gallery.container-fluid
+            -var list = ["gallery_image_1.png","gallery_image_2.png","gallery_image_3.png","gallery_image_4.png","gallery_image_5.png","gallery_image_6.png","gallery_image_7.png","gallery_image_8.png"]
+                each img in list
+                    .gallery__item
+                        img(class="gallery__img", src="images/gallery/" + img, alt="")
+                        .gallery__layer
+                            .gallery__line
+                                .gallery__title
+                                    p.gallery__title--sub 1987
+                                    p.gallery__title--main RƯỢU
+        .home-page
+            section.best-product
+                .container
+                    h3.home-page__label SẢN PHẨM BÁN CHẠY
+                    img(src="images/pattern/heading-pattern-2.png", alt="")
+                    .new-product__list
+                        .product-single.row
+                            //- -var list = ["images/products/hotproduct_1.png", "images/products/hotproduct_2.png", "images/products/hotproduct_3.png", "images/products/hotproduct_4.png"]
+                            //-         each val in list 
+                            //-             .col-md-3.col-lg-3
+                            //-                 .new-product__item
+                            //-                     img(class="new-product__img", src=val, alt="")
+                            //-                     h3.new-product__name RƯỢU VANG ĐÀ LẠT
+                            //-                     .new-product__price
+                            //-                         h4.new-product__price--main 370.000
+                            //-                             sup đ 
+                            //-                         span.text-muted -
+                            //-                         h4.new-product__price--sub.text-muted  450.000
+                            //-                             sup đ
+                            //-                     button.btn.btn--primary.btn__add ADD TO CART
+                            //-                     .new-product__option.d-flex.justify-content-between
+                            //-                         .new-product__option--item
+                            //-                             i.fas.fa-heart
+                            //-                             span Yêu thích
+                            //-                         .new-product__option--item
+                            //-                             i.far.fa-chart-bar
+                            //-                             span So sánh
+            .container
+                .row
+                    .col-md-8.col-lg-8
+                        section.blog
+                            h3.home-page__label TIN TỨC & BLOG
+                            img(src="images/pattern/heading-pattern-2.png", alt="")
+                            .blog__wrap
+                                .row
+                                    .col-md-6.col-lg-6
+                                        .blog__item.text-left
+                                            .blog__img
+                                                img(class="blog__img--main" src="images/blog/blog_1.png", alt="")
+                                                //- .blog__layer
+                                                //-     .blog__icon
+                                                //-         i.fas.fa-link
+
+                                            h4.blog__heading Vang Thăng Long Classic
+                                            .blog__info
+                                                span.blog__author Đăng bởi Giangle
+                                                span |
+                                                span.blog__time 30/06/2015
+                                                span |
+                                                span.blog__comment 60 bình luận
+                                            p.blog__content
+                                                | Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                                                | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                                                | Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, 
+                                                | sản phẩm được đóng chai dung tích 750ml...
+                                            a.read-more(href="#") Read more
+                                    .col-md-6.col-lg-6
+                                        .blog__item.text-left
+                                            .blog__img
+                                                img(class="blog__img--main" src="images/blog/blog_2.png", alt="")
+                                                //- .blog__layer
+                                                //-     .blog__icon
+                                                //-         i.fas.fa-link
+
+                                            h4.blog__heading Vang Thăng Long Classic
+                                            .blog__info
+                                                span.blog__author Đăng bởi Giangle
+                                                span |
+                                                span.blog__time 30/06/2015
+                                                span |
+                                                span.blog__comment 60 bình luận
+                                            p.blog__content
+                                                | Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên
+                                                | men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. 
+                                                | Vang Nổ thăng long...
+                                            a.read-more(href="#") Read more
+
+
+                    
+                    
+                    .col-md-4.col-lg-4
+                        section.review
+                            h3.home-page__label KHÁCH HÀNG
+                            img(src="images/pattern/heading-pattern-2.png", alt="")
+                            .review__wrap
+                                .review__icon
+                                    i.fas.fa-quote-right
+                                p.review__content.mb-0 Vang nổ Thang Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bột ga đầy trắng mịn. Van nổ Thăng Long ... 
+                                a.read-more(href="#") Read more
+                                img(class="review__img" src="images/avatar_1.png", alt="")
+                                .customer-info
+                                    h3.mb-0 GIANG LT
+                                    h4 Graphic design
+            include includes/_footer.pug
+    include includes/_js.pug
+    
+            
+
+
+                    
+                                
+                    
+
+
+                
+
+                                
+
+
+
+
+    

@@ -1,0 +1,69 @@
+.new-product {
+    &__list {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    &__img {
+        width: 30%;
+    }
+
+    &__name {
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        margin-bottom: 1rem;
+
+        &--main {
+            font-size: 2.3em;
+            color: $color-primary;
+            display: inline;
+        }
+
+        &--sub {
+            display: inline;
+            font-size: 1.6em;
+            text-decoration: line-through;
+        }
+
+    }
+
+    &__option {
+        visibility: hidden;
+        opacity: 0;
+        color: $color-white;
+        background-color: $color-black;
+        padding: 0.5em 2em;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transition: all 0.5s;
+
+        &--item {
+            font-size: 1.3em;
+
+            i {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+}
+
+// HOVER
+.new-product__item:hover>.new-product__option {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.new-product__item:hover>.new-product__name {
+    color: $color-primary;
+}

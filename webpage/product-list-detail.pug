@@ -1,0 +1,68 @@
+include includes/_head.pug
+body
+    include includes/_menu.pug
+    include includes/_menu-wine.pug
+    .wrap
+        .product-list
+            .container
+                .product-detail__tag
+                    a(href="").product-detail__tag--item Trang chủ
+                    span /
+                    a(href="").product-detail__tag--item Sản phẩm
+                    span /
+                    a(href="").product-detail__tag--item Rượu vang đỏ
+                .container-fluid.px-0
+                    img(class="product-list__banner", src="images/product-list-page/banner.jpg", alt="")
+            .container
+                .row
+                    .col-md-3.col-lg-3
+                        include includes/_side-menu.pug
+                    .col-md-9.col-lg-9
+                        .product-list__show
+                            .product-list__display
+                                .product-list__view
+                                    a(href="#")
+                                        span
+                                            i.fas.fa-th
+                                    a(href="#")
+                                        span
+                                            i.fas.fa-list
+                                .product-list__view
+                                    span
+                                        i.fas.fa-caret-left
+                                    -var list = ["1", "2", "3", "4", "5"]
+                                        each page in list
+                                            a(href="")
+                                                span=page
+                                    span
+                                        i.fas.fa-caret-right
+                            .product-list-detail
+                                .container
+                                    ul.list-unstyled
+                                        -var list = ["product-info-1.jpg", "product-info-2.jpg", "product-info-1.jpg","product-info-2.jpg"]
+                                            each img in list
+                                                li.product-list-detail__item
+                                                    .row
+                                                        .col-md-4.col-lg-4
+                                                            img.product-list-detail__img(src="images/products/" + img, alt="")
+                                                        .col-md-8.col-mg-8
+                                                            .product-list-detail__info
+                                                                h3.hot-product__brand RƯỢU NHO NĂM 1987
+                                                                h4.new-product__price--main 370.000
+                                                                    sup đ
+                                                                p.product-list-detail__text Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hóa của protein béo.
+                                                                .product-list-detail__interact
+                                                                    button.btn.btn--primary.btn__add ADD TO CARD
+                                                                    .product-list-detail__option
+                                                                        a(href="#")
+                                                                            i.fas.fa-heart
+                                                                            span Yêu thích
+                                                                    .product-list-detail__option
+                                                                        a(href="#")
+                                                                            i.far.fa-chart-bar
+                                                                            span So sánh
+
+
+                                            
+        include includes/_footer.pug
+        

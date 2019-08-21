@@ -1,0 +1,44 @@
+.wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.menu {
+    color: $color-gray;
+    padding: 0.5em 0;
+    background-color: $color-white-light;
+    position: static;
+    z-index: 123;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10em;
+    }
+
+    &__link {
+        color: $color-gray;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+}
+
+.search-box {
+    display: flex;
+    justify-content: flex-end;
+
+    &__button {
+        border: none;
+        padding-left: 0.5em;
+        background-color: rgba($color: #fff, $alpha: 0);
+        height: 100%;
+        color: $color-gray;
+
+        &::placeholder {
+            color: $color-gray;
+        }
+    }
+}
